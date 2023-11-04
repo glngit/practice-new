@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>feedbackform</title>
+    <link rel="stylesheet" href="{%static 'css/total.css'%}">
+  </head>
+  <body>
+    {%if sent%}
+    <h1>Thanks for providing info with clean method validations </h1>
+    {%else%}
+    <h1>please fill the form with clean methos validators</h1>
+    {%endif%} <hr>
+
+    <form method="post">
+      {{f.as_p}}
+      {%csrf_token%}
+      <input type="submit" name="" value="submit">
+
+    </form>
+    
+
+
+  </body>
+</html>
